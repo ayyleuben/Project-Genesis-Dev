@@ -1,0 +1,41 @@
+
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "InfusionSoft"
+host: "api.infusionsoft.com"
+basePath: "/api"
+schemes:
+- "https"
+- "http"
+produces:
+- "application/json, */*"
+paths:
+  /ap_info.json:
+    get:
+      summary: "Create contact"
+      description: "Create contact"
+      operationId: "create"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "contact"
+        in: "query"
+        description: "First Name"
+        required: false
+        type: "string"
+      responses:
+        200:
+          description: "OK"
+          schema:
+            $ref: "#/definitions/infusionsoft.com/app/contact/create"
+definitions:
+  contact:
+    type: "object"
+    properties:
+      first_name:
+        type: "string"
+      last_name:
+        type: "string"
+      email:
+        type: "string"

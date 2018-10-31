@@ -1,0 +1,62 @@
+ 
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Add InfusionSoft Contact"
+  },
+  "host": "https://api.infusionsoft.com",
+  "basePath": "app/contact/create",
+  "schemes": [
+    "http"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/InfusionSoft_APITest2.json": {
+      "get": {
+        "summary": "General Information",
+        "description": "General Information",
+        "operationId": "General Information",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "First Name": "iata",
+            "description": "Airport code",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CreateContact"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CreateContact": {
+      "type": "object",
+      "properties": {
+        "First Name": {
+          "type": "string"
+        },
+        "Last Name": {
+          "type": "string"
+        },
+        "Company / Firm": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}					
+				
+			
